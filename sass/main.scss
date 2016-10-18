@@ -207,7 +207,7 @@
 .second-frame {
     // background: #fff;
     top: 0;
-    height: 92px;
+    height: 100%;
     width: 100%;
 }
 
@@ -221,7 +221,8 @@
     right: 0px;
     top: 0;
     z-index: 8;
-    width: 118%;
+    height: 90px;
+    // width: 118%;
 }
 
 .bg-2 {
@@ -236,7 +237,7 @@
 
 .bg-3 {
     position: absolute;
-    left: -146px;
+    left: -147px;
     z-index: 1;
 }
 
@@ -318,6 +319,15 @@
     }
 }
 
+@include keyframes (an1) {
+    0% {
+        @include transform(translateX(-20%));
+    }
+    100% {
+        @include transform(translateX(230px));
+    }
+}
+
 @include keyframes (white-bg-an) {
     0% {
         @include transform(translateX(-200px));
@@ -333,6 +343,10 @@
 
 .an2 {
     @include animation(an2 0.9s ease-in-out 0.9s forwards);
+}
+
+.an1 {
+    @include animation(an1 1.2s ease-in-out 0s forwards);
 }
 
 .first-frame {
@@ -390,9 +404,9 @@
 
 .s4 {
     position: absolute;
-    right: 245px;
+    right: 310px;
     z-index: 99;
-    width: 30%;
+    width: 130px;
     top: 30px;
     opacity: 0;
 }
